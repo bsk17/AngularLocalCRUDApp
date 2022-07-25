@@ -1,0 +1,24 @@
+<div class="Page">
+    <div class="Card" *ngIf="editingConsumer">
+        <div class="Title">Editing Consumer</div>
+        <div class="InputConsumerField">
+            <label>Email: </label><br/>
+            <input class="InputField" [(ngModel)]="editingConsumer.email">
+        </div>
+        <div class="InputConsumerField">
+            <label>Username: </label><br/>
+            <input class="InputField" [(ngModel)]="editingConsumer.username">
+        </div>
+        <div class="InputConsumerField">
+            <label>Phone Number : </label><br/>
+            <input class="InputField" [(ngModel)]="editingConsumer.phoneNumber">
+        </div>
+        <button class="Button SaveButton" (click)="saveConsumer()">Save</button>
+    </div>
+
+    <div class="Card SearchConsumerCard">
+        <div class="Title"> Search for a consumer to Edit </div>
+        <input class="InputField" [(ngModel)]="toSearchConsumerEmail" placeholder="Consumer Email"/>
+        <button (click)="searchConsumer()" class="Button">Search</button>
+    </div>
+</div>

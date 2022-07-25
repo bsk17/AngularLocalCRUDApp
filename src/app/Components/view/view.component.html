@@ -1,0 +1,26 @@
+<div class="Page">
+    <div class="Card" *ngIf="viewingConsumer">
+        <div class="Title">Viewing Consumer Information</div>
+        <div class="ConsumerField">
+            <label>Email: </label>
+            <p>{{viewingConsumer.email}}</p>
+        </div>
+        <div class="ConsumerField">
+            <label>Created At: </label>
+            <p>{{viewingConsumer.createdAt.toLocaleDateString()}}</p>
+        </div>
+        <div class="ConsumerField">
+            <label>Name: </label>
+            <p>{{viewingConsumer.username}}</p>
+        </div>
+        <div class="ConsumerField">
+            <label>Id: </label>
+            <p>{{viewingConsumer.id}}</p>
+        </div>
+    </div>
+    <div class="Card SearchConsumerCard">
+        <div class="Title"> Search for a consumer to View </div>
+        <input class="InputField" [(ngModel)]="toSearchConsumerEmail" placeholder="Consumer Email"/>
+        <button (click)="searchConsumer()" class="Button">Search</button>
+    </div>
+</div>
